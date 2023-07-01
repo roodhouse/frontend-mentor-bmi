@@ -6,11 +6,11 @@ import HeroCopy from './top/HeroCopy'
 function Top() {
   return (
     <>
-      <div id="topHeroContainer">
+      <div id="topHeroContainer" className='pb-[217px] mb-[217px]'>
         <div id="heroIconWrapper">
           <HeroIcon />
         </div>
-        <div id="heroHeadingWrapper">
+        <div id="heroHeadingWrapper" className='mb-6'>
           <HeroHeading />
         </div>
         <div id="heroCopyWrapper">
