@@ -1,11 +1,26 @@
 import './App.css';
+import Hero from '../src/components/Hero'
+import Results from '../src/components/Results'
+import Tips from '../src/components/Tips'
+import Limits from '../src/components/Limits'
 
 function App() {
   return (
     <div className="App">
-     <h1 className="text-3xl font-bold underline">
-      Hello <span className='font-["Inter"]'>world!</span>
-    </h1>
+     <div id='contentWrapper' className=''>
+      <div id='heroWrapper' className='bg-gradient-315 pt-8 px-6'>
+        <Hero />
+      </div>
+      <div id='resultsWrapper' className='px-6'>
+        <Results />
+      </div>
+      <div id='tipsWrapper' className='px-6'>
+        <Tips />
+      </div>
+      <div id='limitsWrapper' className='px-6 pb-[96px]'>
+        <Limits />
+      </div>
+     </div>
     </div>
   );
 }
