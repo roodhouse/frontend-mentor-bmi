@@ -1,4 +1,7 @@
-import React from 'react'
+import React from 'react';
+import MetricHeight from './metric/Height'
+import MetricWeight from './metric/Weight';
+import ImperialHeight from './imperial/Height'
 
 function BottomForm() {
   return (
@@ -16,62 +19,21 @@ function BottomForm() {
             </div>
           </div>
           <div id="measurementWrapper">
+
             <div id="measurementMetricWrapper">
               <div id="mearsurementMetricContainer">
-                <div id='heightMetric'>
-                  <div id="heightMetricInputWrapper">
-                    <div id="heightMetricInputLabel">
-                      <label htmlFor="userMetricHeight">Height</label>
-                    </div>
-                    <div id="heightMetricInput">
-                      <input type="text" id='userMetricHeight' name='userMetricHeight' placeholder='0'/>
-                    </div>
-                  </div>
-                  <div id="heightMetricUnit">
-                    <p>cm</p>
-                  </div>
-                </div>
-                <div id='weightMetric'>
-                  <div id="weightMetricInputWrapper">
-                    <div id="weightMetricInputLabel">
-                      <label htmlFor="userMetricWeight">Weight</label>
-                    </div>
-                    <div id="weightMetricInput">
-                      <input type="text" id='userMetricWeight' name='userMetricWeight' placeholder='0'/>
-                    </div>
-                  </div>
-                  <div id="weightMetricUnit">
-                    <p>kg</p>
-                  </div>
-                </div>
+                <MetricHeight />
+                <MetricWeight />
               </div>
             </div>
+
             <div id="measurementImperialWrapper">
             <div id="mearsurementImperialContainer">
-                <div id='heightImperial'>
-                  <div id="heightImperialInputWrapper">
-                    <div id="heightImperialInputLabel">
-                      <label htmlFor="userImperialHeight">Height</label>
-                    </div>
-                    <div id="heightImperialInput">
-                      <div id="heightMeasurementFoot">
-                        <input type="text" id='userImperialHeightFoot' name='userMetricHeightFoot' placeholder='0'/>
-                      </div>
-                      <div id="heightFootUnit">
-                        <p>ft</p>
-                      </div>
-                      <div id="heightMeasurementInch">
-                        <input type="text" id='userImperialHeightInch' name='userMetricHeightInch' placeholder='0'/>
-                      </div>
-                      <div id="heightInchUnit">
-                        <p>in</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              
+                <ImperialHeight />
                 <div id='weightImperial'>
                   <div id="weightImperialInputWrapper">
-                    <div id="weightImperialInputLabel">
+                    <div id="weightImperialInputLabel" className='mb-2 font-["Inter"] font-normal text-sm leading-[150%] text-darkElectricBlue'>
                       <label htmlFor="userImperialWeight">Weight</label>
                     </div>
                     <div id="weightImperialInput">
