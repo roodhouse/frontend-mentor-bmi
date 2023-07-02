@@ -5,13 +5,13 @@ function BottomForm() {
     <>
       <div id="bottomFormContainer">
         <form>
-          <div id="unitWrapper">
-            <div id="metricContainer">
-              <input type="radio" id='metric' value='metric'/>
-              <label htmlFor="metric">Metric</label>
+          <div id="unitWrapper" className='mb-6 flex'>
+            <div id="metricContainer" className='font-["Inter"] text-base font-semibold leading-[150%] text-gunMetal mr-6 flex items-center'>
+              <input name='selection' type="radio" id='metric' value='metric' className='mr-[18px] w-[31px] h-[31px] appearance-none rounded-[50%] border border-solid border-borders checked:bg-blue checked:border-[8px] checked:border-solid checked:border-[#d8e2e7] hover:border-blue checked:hover:bg-blue checked:hover:border-[#d8e2e7]'/>
+              <label htmlFor="metric" className='mr-6'>Metric</label>
             </div>
-            <div id="imperialContainer">
-              <input type="radio" id='imperial' value='imperial'/>
+            <div id="imperialContainer" className='font-["Inter"] text-base font-semibold leading-[150%] text-gunMetal flex items-center'>
+              <input name='selection' type="radio" id='imperial' value='imperial' className='mr-[18px] w-[31px] h-[31px] appearance-none rounded-[50%] border border-solid border-borders checked:bg-blue checked:border-[8px] checked:border-solid checked:border-[#d8e2e7] hover:border-blue checked:hover:bg-blue checked:hover:border-[#d8e2e7]'/>
               <label htmlFor="metric">Imperial</label>
             </div>
           </div>

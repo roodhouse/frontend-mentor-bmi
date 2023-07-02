@@ -9,7 +9,7 @@ function Hero() {
         <div id="heroTopWrapper">
           <Top />
         </div>
-        <div id="heroBottomWrapper" className='mt-[-217px]'>
+        <div id="heroBottomWrapper" className='mt-[-387px]'>
           <Bottom />
         </div>
       </div>
