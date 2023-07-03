@@ -8,10 +8,10 @@ function App() {
   return (
     <div className="App">
      <div id='contentWrapper' className=''>
-      <div id='heroWrapper' className=''>
+      <div id='heroWrapper' className='mb-[72px]'>
         <Hero />
       </div>
-      <div id='resultsWrapper' className='px-6'>
+      <div id='resultsWrapper' className='mb-[128px]'>
         <Results />
       </div>
       <div id='tipsWrapper' className='px-6'>
