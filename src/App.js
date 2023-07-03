@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="App">
      <div id='contentWrapper' className=''>
-      <div id='heroWrapper' className='bg-gradient-315 pt-8 px-6 rounded-[0px_0px_35px_35px]'>
+      <div id='heroWrapper' className=''>
         <Hero />
       </div>
       <div id='resultsWrapper' className='px-6'>

@@ -6,7 +6,7 @@ import BottomResults from './bottom/BottomResults'
 function Bottom() {
   return (
     <>
-      <div id="bottomContainer" className='bg-white rounded-2xl p-6'>
+      <div id="bottomContainer" className='bg-white rounded-2xl p-6 shadow-[16px_32px_56px_0px_rgba(143,174,207,0.25)]'>
         <div id="bottomHeadingWrapper" className='mb-6'>
           <BottomHeading />
         </div>
