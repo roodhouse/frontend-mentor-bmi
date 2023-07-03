@@ -13,7 +13,7 @@ function Bottom() {
         <div id="bottomFormWrapper" className='mb-6'>
           <BottomForm />
         </div>
-        <div id="bottomResultsWrapper">
+        <div id="bottomResultsWrapper" className=''>
           <BottomResults />
         </div>
       </div>

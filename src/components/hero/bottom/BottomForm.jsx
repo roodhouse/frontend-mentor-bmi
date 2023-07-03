@@ -2,6 +2,7 @@ import React from 'react';
 import MetricHeight from './metric/Height'
 import MetricWeight from './metric/Weight';
 import ImperialHeight from './imperial/Height'
+import ImperialWeight from './imperial/Weight'
 
 function BottomForm() {
   return (
@@ -27,27 +28,11 @@ function BottomForm() {
               </div>
             </div>
 
-            <div id="measurementImperialWrapper">
+            <div id="measurementImperialWrapper" className='hidden'>
             <div id="mearsurementImperialContainer">
               
                 <ImperialHeight />
-                <div id='weightImperial'>
-                  <div id="weightImperialInputWrapper">
-                    <div id="weightImperialInputLabel" className='mb-2 font-["Inter"] font-normal text-sm leading-[150%] text-darkElectricBlue'>
-                      <label htmlFor="userImperialWeight">Weight</label>
-                    </div>
-                    <div id="weightImperialInput">
-                      <div id="weightMeasurementPounds">
-                        <input type="text" id='userImperialWeightPounds' name='userImperialWeightPounds' placeholder='0'/>
-                      </div>
-                      <div id="weghitMeasurementOunce">
-                        <div id="weightImperialUnit">
-                          <p>oz</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <ImperialWeight />
               </div>
 
             </div>
