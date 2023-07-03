@@ -10,6 +10,10 @@ function BottomForm() {
   const [unit, setUnit] = useState('metric')
   const [cm, setCm] = useState(0)
   const [kg, setKg] = useState(0)
+  const [ft, setFt] = useState(0)
+  const [inch, setInch] = useState(0)
+  const [pound, setPound] = useState(0)
+  const [ounce, setOunce] = useState(0)
 
   function recordCm(cm) {
       const centimeters = parseInt(cm)
@@ -21,15 +25,47 @@ function BottomForm() {
     setKg(kilograms)
 }
 
+function recordFt(ft) {
+  const feet = parseInt(ft)
+  setFt(feet)
+}
+
+function recordIn(allInches) {
+  const inches = parseInt(allInches)
+  setInch(inches)
+}
+
+function recordLb(lb) {
+  const lbs = parseInt(lb)
+  setPound(lbs)
+}
+
+function recordOz(allOunces) {
+  const ounces = parseInt(allOunces)
+  setOunce(ounces)
+}
+
 // convert the cm into m
 let meters = cm * .01
 // get meters squared
 meters = meters*meters
 console.log(`after the calc ${meters}`)
 
+console.log(ft, inch)
+// convert feet to inches
+let feet = ft*12
+// find all the inches
+let totalInches = feet + inch
+// square the inches
+totalInches = totalInches*totalInches
+// Find the height part of the bmi equation
+totalInches = totalInches * 703
+console.log(totalInches)
+
+// need to convert the ounces to a decimal and add to the pounds
+console.log(pound, ounce)
 let BMI = kg/meters
-console.log(kg)
-console.log(meters)
+
 console.log(BMI)
 
   const { register, resetField, handleSubmit, formState: {errors} } = useForm({defaultValues: {
@@ -86,8 +122,8 @@ function handleClick(e) {
             <div id="measurementImperialWrapper" className='hidden'>
             <div id="mearsurementImperialContainer">
               
-                <ImperialHeight />
-                <ImperialWeight />
+                <ImperialHeight register={register} recordFt={recordFt} recordIn={recordIn} />
+                <ImperialWeight register={register} recordLb={recordLb} recordOz={recordOz}/>
               </div>
 
             </div>
