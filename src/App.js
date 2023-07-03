@@ -11,10 +11,10 @@ function App() {
       <div id='heroWrapper' className='mb-[72px]'>
         <Hero />
       </div>
-      <div id='resultsWrapper' className='mb-[128px]'>
+      <div id='resultsWrapper' className='mb-[72px]'>
         <Results />
       </div>
-      <div id='tipsWrapper' className='px-6'>
+      <div id='tipsWrapper' className='bg-gradient-opacity mb-[72px]'>
         <Tips />
       </div>
       <div id='limitsWrapper' className='px-6 pb-[96px]'>
