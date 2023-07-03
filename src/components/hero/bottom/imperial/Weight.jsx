@@ -11,7 +11,7 @@ function Weight() {
                   <div id="weightInputsContainer" className='flex justify-start'>
                       <div id="weightImperialInputPoundWrapper" className='flex rounded-xl border border-solid border-borders w-[131px] mr-4 px-6 py-[20px] justify-between'>
                         <div id="weightImperialInputPoundContainer" className='w-[75%]'>
-                          <input type="text" id='userImperialWeightPound' name='userWeightPound' placeholder='0' className='font-["Inter"] text-2xl font-semibold tracking-[-1.2px] text-gunMetal w-full'/>
+                          <input type="text" id='userImperialWeightPound' name='userImperialWeightPound' placeholder='0' className='font-["Inter"] text-2xl font-semibold tracking-[-1.2px] text-gunMetal w-full'/>
                         </div>
                         <div id="weightImperialUnitPound" className='font-["Inter"] text-2xl font-semibold tracking-[-1.2px] text-blue'>
                           <p>lbs</p>
