@@ -5,9 +5,12 @@ import ImperialHeight from './imperial/Height'
 import ImperialWeight from './imperial/Weight'
 import { useForm } from 'react-hook-form'
 
+// create a function in a parent component that takes the value of BMI found here and then passes it to another child
+
 function BottomForm() {
 
   const [unit, setUnit] = useState('metric')
+  const [BMI, setBMI] = useState(0)
   const [cm, setCm] = useState(0)
   const [kg, setKg] = useState(0)
   const [ft, setFt] = useState(0)
@@ -45,29 +48,6 @@ function recordOz(allOunces) {
   setOunce(ounces)
 }
 
-// convert the cm into m
-let meters = cm * .01
-// get meters squared
-meters = meters*meters
-console.log(`after the calc ${meters}`)
-
-console.log(ft, inch)
-// convert feet to inches
-let feet = ft*12
-// find all the inches
-let totalInches = feet + inch
-// square the inches
-totalInches = totalInches*totalInches
-// Find the height part of the bmi equation
-totalInches = totalInches * 703
-console.log(totalInches)
-
-// need to convert the ounces to a decimal and add to the pounds
-console.log(pound, ounce)
-let BMI = kg/meters
-
-console.log(BMI)
-
   const { register, resetField, handleSubmit, formState: {errors} } = useForm({defaultValues: {
     userMetricHeight: '',
     userMetricWeight: '',
@@ -78,11 +58,59 @@ console.log(BMI)
 
 }})
 
+useEffect(() => {
+
+  if (unit === 'metric') {
+    // convert the cm into m
+    let meters = cm * .01
+    // get meters squared
+    meters = meters*meters
+    let bmi = 0;
+    bmi = kg/meters
+    setBMI(bmi) 
+  } else if (unit === 'imperial') { 
+    // convert feet to inches
+    let feet = ft*12
+    // find all the inches
+    let totalInches = feet + inch
+    // inches to meters
+    let inchesToMeters = totalInches*0.0254
+    inchesToMeters = inchesToMeters*inchesToMeters
+    // lb to kg
+    let lbToKg = pound * 0.45392
+    // oz to kg
+    let ozToKg = ounce * 0.0283495
+    let imperialKg = lbToKg + ozToKg
+    // console.log(inchesToMeters, meters)
+    let bmi = 0;
+    bmi = imperialKg/inchesToMeters
+    setBMI(bmi)
+  
+  }
+},[cm, ft, kg, inch, pound, ounce])
+
+console.log(BMI)
+
+
 // toggle metric and imperial
 function handleClick(e) {
+  console.log(e.target.id)
+  setUnit(e.target.id)
   const measurementMetricWrapper = document.getElementById('measurementMetricWrapper')
   const measurementImperialWrapper = document.getElementById('measurementImperialWrapper');
-
+  resetField("userMetricHeight")
+  resetField("userMetricWeight")
+  resetField("userImperialHeightFoot")
+  resetField("userImperialHeightInch")
+  resetField("userImperialWeightPound")
+  resetField("userImperialWeightOunce")
+  setCm(0)
+  setKg(0)
+  setFt(0)
+  setInch(0)
+  setPound(0)
+  setOunce(0)
+  
   if (e.target.value === 'metric') {
         measurementMetricWrapper.style.display = 'block'
         measurementImperialWrapper.style.display = 'none'
