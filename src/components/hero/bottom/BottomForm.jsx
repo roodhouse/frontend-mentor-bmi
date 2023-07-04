@@ -8,17 +8,12 @@ import { useForm } from 'react-hook-form'
 function BottomForm({ theUserBmi }) {
 
   const [unit, setUnit] = useState('metric')
-  const [BMI, setBMI] = useState(0)
   const [cm, setCm] = useState(0)
   const [kg, setKg] = useState(0)
   const [ft, setFt] = useState(0)
   const [inch, setInch] = useState(0)
   const [pound, setPound] = useState(0)
   const [ounce, setOunce] = useState(0)
-
-  console.log(`the cm is: ${cm}`)
-  console.log(`the bmi is ${BMI}`)
-  console.log('from begining: '+ typeof BMI)
 
   function recordCm(cm) {
       const centimeters = parseInt(cm)
@@ -51,8 +46,8 @@ function recordOz(allOunces) {
 }
 
   const { register, resetField, handleSubmit, formState: {errors} } = useForm({defaultValues: {
-    userMetricHeight: 0,
-    userMetricWeight: 0,
+    userMetricHeight: '',
+    userMetricWeight: '',
     userImperialHeightFoot: '',
     userImperialHeightInch: '',
     userImperialWeightPound: '',
@@ -70,8 +65,8 @@ useEffect(() => {
     let bmi = 0;
     bmi = kg/meters
     console.log('from metric if: '+typeof bmi)
+    bmi = bmi.toFixed(1)
     theUserBmi(bmi)
-    setBMI(bmi) 
   } else if (unit === 'imperial') { 
     // convert feet to inches
     let feet = ft*12
@@ -87,8 +82,8 @@ useEffect(() => {
     let imperialKg = lbToKg + ozToKg
     let bmi = 0;
     bmi = imperialKg/inchesToMeters
+    bmi = bmi.toFixed(1)
     theUserBmi(bmi)
-    setBMI(bmi)  
   }
 },[cm, ft, kg, inch, pound, ounce])
 
