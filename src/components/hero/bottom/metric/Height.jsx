@@ -3,7 +3,7 @@ import React from 'react'
 function Height({register, recordCm}) {
   return (
     <>
-        <div id='heightMetric' className='mb-4'>
+        <div id='heightMetric' className='mb-4 md:w-[50%] md:pr-6 md:mb-0'>
                   <div id="heightMetricInputWrapper" className='flex flex-wrap'>
                     <div id="heightMetricInputLabel" className='mb-2 font-["Inter"] font-normal text-sm leading-[150%] text-darkElectricBlue w-full'>
                       <label htmlFor="userMetricHeight">Height</label>
