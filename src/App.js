@@ -7,17 +7,17 @@ import Limits from '../src/components/Limits'
 function App() {
   return (
     <div className="App">
-     <div id='contentWrapper' className=''>
-      <div id='heroWrapper' className='mb-[72px]'>
+     <div id='contentWrapper' className='flex flex-col justify-center items-center'>
+      <div id='heroWrapper' className='mb-[72px] max-w-[640px]'>
         <Hero />
       </div>
-      <div id='resultsWrapper' className='mb-[72px]'>
+      <div id='resultsWrapper' className='mb-[72px] max-w-[640px]'>
         <Results />
       </div>
-      <div id='tipsWrapper' className='bg-gradient-opacity mb-[72px]'>
+      <div id='tipsWrapper' className='bg-gradient-opacity mb-[72px] max-w-[640px]'>
         <Tips />
       </div>
-      <div id='limitsWrapper' className='pl-[20px] pr-[29px] pb-[96px]'>
+      <div id='limitsWrapper' className='pl-[20px] pr-[29px] pb-[96px] max-w-[640px]'>
         <Limits />
       </div>
      </div>
