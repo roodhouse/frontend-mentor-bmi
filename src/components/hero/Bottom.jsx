@@ -6,6 +6,12 @@ import BottomResults from './bottom/BottomResults'
 function Bottom() {
   
   const [userBMI, setUserBMI] = useState(0)
+  const [unit, setUnit] = useState('metric')
+
+  const theUnit = (newunit) => {
+    setUnit(newunit)
+  }
+
 
   const theUserBmi = (newbmi) => {
     setUserBMI(newbmi)
@@ -18,10 +24,10 @@ function Bottom() {
           <BottomHeading />
         </div>
         <div id="bottomFormWrapper" className='mb-6'>
-          <BottomForm theUserBmi={theUserBmi} />
+          <BottomForm theUserBmi={theUserBmi} theUnit={theUnit} />
         </div>
         <div id="bottomResultsWrapper" className=''>
-          <BottomResults userBMI={userBMI} />
+          <BottomResults userBMI={userBMI} unit={unit} />
         </div>
       </div>
     </>

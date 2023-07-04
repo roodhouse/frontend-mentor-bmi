@@ -5,7 +5,7 @@ import ImperialHeight from './imperial/Height'
 import ImperialWeight from './imperial/Weight'
 import { useForm } from 'react-hook-form'
 
-function BottomForm({ theUserBmi }) {
+function BottomForm({ theUserBmi, theUnit }) {
 
   const [unit, setUnit] = useState('metric')
   const [cm, setCm] = useState(0)
@@ -58,16 +58,17 @@ function recordOz(allOunces) {
 useEffect(() => {
 
   if (unit === 'metric') {
+    theUnit('metric')
     // convert the cm into m
     let meters = cm * .01
     // get meters squared
     meters = meters*meters
     let bmi = 0;
     bmi = kg/meters
-    console.log('from metric if: '+typeof bmi)
     bmi = bmi.toFixed(1)
     theUserBmi(bmi)
   } else if (unit === 'imperial') { 
+    theUnit('imperial')
     // convert feet to inches
     let feet = ft*12
     // find all the inches
