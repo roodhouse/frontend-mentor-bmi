@@ -5,9 +5,7 @@ import ImperialHeight from './imperial/Height'
 import ImperialWeight from './imperial/Weight'
 import { useForm } from 'react-hook-form'
 
-// create a function in a parent component that takes the value of BMI found here and then passes it to another child
-
-function BottomForm() {
+function BottomForm({ theUserBmi }) {
 
   const [unit, setUnit] = useState('metric')
   const [BMI, setBMI] = useState(0)
@@ -17,6 +15,10 @@ function BottomForm() {
   const [inch, setInch] = useState(0)
   const [pound, setPound] = useState(0)
   const [ounce, setOunce] = useState(0)
+
+  console.log(`the cm is: ${cm}`)
+  console.log(`the bmi is ${BMI}`)
+  console.log('from begining: '+ typeof BMI)
 
   function recordCm(cm) {
       const centimeters = parseInt(cm)
@@ -49,8 +51,8 @@ function recordOz(allOunces) {
 }
 
   const { register, resetField, handleSubmit, formState: {errors} } = useForm({defaultValues: {
-    userMetricHeight: '',
-    userMetricWeight: '',
+    userMetricHeight: 0,
+    userMetricWeight: 0,
     userImperialHeightFoot: '',
     userImperialHeightInch: '',
     userImperialWeightPound: '',
@@ -67,6 +69,8 @@ useEffect(() => {
     meters = meters*meters
     let bmi = 0;
     bmi = kg/meters
+    console.log('from metric if: '+typeof bmi)
+    theUserBmi(bmi)
     setBMI(bmi) 
   } else if (unit === 'imperial') { 
     // convert feet to inches
@@ -81,20 +85,16 @@ useEffect(() => {
     // oz to kg
     let ozToKg = ounce * 0.0283495
     let imperialKg = lbToKg + ozToKg
-    // console.log(inchesToMeters, meters)
     let bmi = 0;
     bmi = imperialKg/inchesToMeters
-    setBMI(bmi)
-  
+    theUserBmi(bmi)
+    setBMI(bmi)  
   }
 },[cm, ft, kg, inch, pound, ounce])
-
-console.log(BMI)
 
 
 // toggle metric and imperial
 function handleClick(e) {
-  console.log(e.target.id)
   setUnit(e.target.id)
   const measurementMetricWrapper = document.getElementById('measurementMetricWrapper')
   const measurementImperialWrapper = document.getElementById('measurementImperialWrapper');
