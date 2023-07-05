@@ -69,6 +69,14 @@ Styling the radio buttons was the first challenge in this project. I leaned abou
 ```js
 <input name='selection' type="radio" id='metric' value='metric' className='mr-[18px] w-[31px] h-[31px] appearance-none rounded-[50%] border border-solid border-borders checked:bg-blue checked:border-[8px] checked:border-solid checked:border-[#d8e2e7] hover:border-blue checked:hover:bg-blue checked:hover:border-[#d8e2e7]'/>
 ```
+The next challenge that has been difficult is while in tablet view how to keep the image scaled correctly and not sacrifice a piece of the image. I am using object-fit: cover on the image and it scales nicely. However, the rounded edges of the image are not visible. If I allow do not use object-fit: cover then the rounded edges are visible but the image does not scale correctly.
+
+#### Without object fit
+![](/src/assets/images/noObjectFit.png)
+
+#### With object fit
+![](/src/assets/images/objectFit.png)
+
 
 
 

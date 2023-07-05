@@ -8,10 +8,10 @@ function App() {
   return (
     <div className="App">
      <div id='contentWrapper' className='flex flex-col justify-center items-center'>
-      <div id='heroWrapper' className='mb-[72px] max-w-[640px] md:max-w-full'>
+      <div id='heroWrapper' className='mb-[72px] max-w-[640px] md:max-w-full md:mb-[96px]'>
         <Hero />
       </div>
-      <div id='resultsWrapper' className='mb-[72px] max-w-[640px] md:max-w-full'>
+      <div id='resultsWrapper' className='mb-[72px] max-w-[640px] md:max-w-full md:mb-[96px]'>
         <Results />
       </div>
       <div id='tipsWrapper' className='bg-gradient-opacity mb-[72px] max-w-[640px] md:max-w-full'>
