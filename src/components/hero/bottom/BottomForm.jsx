@@ -120,7 +120,7 @@ function handleClick(e) {
     <>
       <div id="bottomFormContainer">
         <form>
-          <div id="unitWrapper" className='mb-6 flex md:mb-8'>
+          <div id="unitWrapper" className='mb-6 flex md:mb-8 xl:mb-8'>
             <div id="metricContainer" className='font-["Inter"] text-base font-semibold leading-[150%] text-gunMetal mr-6 flex items-center md:w-[299px]'>
               <input defaultChecked name='selection' type="radio" id='metric' value='metric' className='mr-[18px] w-[31px] h-[31px] appearance-none rounded-[50%] border border-solid border-borders checked:bg-blue checked:border-[8px] checked:border-solid checked:border-[#d8e2e7] hover:border-blue checked:hover:bg-blue checked:hover:border-[#d8e2e7]'
                 onClick={handleClick}

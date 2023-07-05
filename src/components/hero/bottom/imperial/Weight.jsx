@@ -3,7 +3,7 @@ import React from 'react'
 function Weight({register, recordLb, recordOz}) {
   return (
     <>
-              <div id='weightImperial' className='mb-4'>
+              <div id='weightImperial' className='mb-4 xl:mb-0'>
                   <div id="weightImperialInputWrapper">
                     <div id="weightImperialInputLabel" className='mb-2 font-["Inter"] font-normal text-sm leading-[150%] text-darkElectricBlue'>
                       <label htmlFor="userImperialWeight">Weight</label>

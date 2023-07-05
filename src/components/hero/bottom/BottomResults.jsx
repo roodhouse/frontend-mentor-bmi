@@ -60,10 +60,10 @@ function BottomResults({ userBMI, unit}) {
   return (
     <>
       <div id="bottomResultsContainer" className='p-8 bg-blue rounded-2xl flex flex-col md:rounded-[16px_999px_999px_16px] md:h-[185px] md:flex-wrap md:justify-center'>
-        <div id='resultsHeading' className='font-["Inter"] font-semibold leading-[150%] text-white md:w-[50%] md:pb-2'>
+        <div id='resultsHeading' className='font-["Inter"] font-semibold leading-[150%] text-white md:w-[50%] md:pb-2 xl:text-base xl:leading-[150%]'>
           <p>Your BMI is...</p>
         </div>
-        <div id='resultsNumber' className='font-["Inter"] mb-6 text-5xl font-semibold leading-[110%] tracking-[-2.4px] text-white md:w-[50%] md:mb-0 md:pb-4'>
+        <div id='resultsNumber' className='font-["Inter"] mb-6 text-5xl font-semibold leading-[110%] tracking-[-2.4px] text-white md:w-[50%] md:mb-0 md:pb-4 xl:text-[64px] xl:tracking-[-3.2px] xl:pb-0'>
           <p>{isNumber()}</p>
         </div>
         <div id='resultsInfo' className='font-["Inter"] text-sm font-normal leading-[150%] text-white md:w-[50%]'>
