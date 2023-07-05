@@ -5,8 +5,8 @@ function ResultsImage() {
   return (
     <>
         <div id="resultsImageContainer">
-            <div id="resultsImage">
-                <img src={ManEating} alt="Man Eating" />
+            <div id="resultsImage" className='md:w-[360px] md:h-[411px]'>
+                <img src={ManEating} alt="Man Eating" className='md:h-full object-cover' />
             </div>
         </div>
     </>

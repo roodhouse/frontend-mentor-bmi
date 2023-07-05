@@ -9,7 +9,7 @@ function Height({register, recordFt, recordIn}) {
                       <label htmlFor="userImperialHeight">Height</label>
                     </div>
                   <div id="heightInputsContainer" className='flex justify-start'>
-                      <div id="heightImperialInputFootWrapper" className='flex rounded-xl border border-solid border-borders w-[131px] mr-4 pr-6 pl-[20px] py-[20px] justify-between'>
+                      <div id="heightImperialInputFootWrapper" className='flex rounded-xl border border-solid border-borders w-[131px] mr-4 pr-6 pl-[20px] py-[20px] justify-between md:w-[299px]'>
                         <div id="heightImperialInputFootContainer" className='w-[75%]'>
                           <input type="number" id='userImperialHeightFoot' name='userImperialHeightFoot' placeholder='0' className='font-["Inter"] text-2xl font-semibold tracking-[-1.2px] text-gunMetal w-full'
                             {...register('userImperialHeightFoot', {
@@ -24,7 +24,7 @@ function Height({register, recordFt, recordIn}) {
                         </div>
                       </div>
 
-                      <div id="heightImperialInputInchWrapper" className='flex rounded-xl border border-solid border-borders w-[131px] pr-6 pl-[20px] py-[20px] justify-between'>
+                      <div id="heightImperialInputInchWrapper" className='flex rounded-xl border border-solid border-borders w-[131px] pr-6 pl-[20px] py-[20px] justify-between md:w-[299px]'>
                         <div id="heightImperialInputInchConatiner" className='w-[75%]'>
                           <input type="number" id='userImperialHeightInch' name='userImperialHeightInch' placeholder='0' className='font-["Inter"] text-2xl font-semibold tracking-[-1.2px] text-gunMetal w-full'
                             {...register('userImperialHeightInch', {

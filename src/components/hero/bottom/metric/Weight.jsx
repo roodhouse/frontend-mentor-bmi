@@ -3,7 +3,7 @@ import React from 'react'
 function Weight({register, recordKg}) {
   return (
     <>
-        <div id='weigthMetric' className='mb-4'>
+        <div id='weigthMetric' className='mb-4 md:w-[50%] md:mb-0'>
                   <div id="weightMetricInputWrapper" className='flex flex-wrap'>
                     <div id="weightMetricInputLabel" className='mb-2 font-["Inter"] font-normal text-sm leading-[150%] text-darkElectricBlue w-full'>
                       <label htmlFor="userMetricWeight">Weight</label>
