@@ -5,7 +5,7 @@ import LimitsIcons from './limits/LimitsIcons'
 function Limits() {
   return (
     <>
-      <div id="limitsContainer">
+      <div id="limitsContainer" className='md:flex md:flex-wrap'>
         <div id="limitsCopyWrapper" className='mb-14'>
           <LimitsCopy />
         </div>
