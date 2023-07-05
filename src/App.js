@@ -14,7 +14,7 @@ function App() {
       <div id='resultsWrapper' className='mb-[72px] max-w-[640px] md:max-w-full md:mb-[96px]'>
         <Results />
       </div>
-      <div id='tipsWrapper' className='bg-gradient-opacity mb-[72px] max-w-[640px] md:max-w-full'>
+      <div id='tipsWrapper' className='bg-gradient-opacity mb-[72px] max-w-[640px] md:max-w-full md:mb-[96px]'>
         <Tips />
       </div>
       <div id='limitsWrapper' className='pl-[20px] pr-[29px] pb-[96px] max-w-[640px] md:max-w-full'>
