@@ -4,14 +4,17 @@ import Results from '../src/components/Results'
 import Tips from '../src/components/Tips'
 import Limits from '../src/components/Limits'
 
+// need to do logic on load for both
+// something off with layout in fullview hero section
+
 function App() {
   return (
     <div className="App">
      <div id='contentWrapper' className='flex flex-col justify-center items-center'>
-      <div id='heroWrapper' className='mb-[72px] max-w-[640px] md:max-w-[1024px] md:mb-[96px] xl:max-w-full xl:w-full'>
+      <div id='heroWrapper' className='mb-[72px] max-w-[640px] md:max-w-[1024px] md:mb-[96px] xl:max-w-full xl:w-full xl:mb-[65px]'>
         <Hero />
       </div>
-      <div id='resultsWrapper' className='mb-[72px] max-w-[640px] md:max-w-[1024px] md:mb-[96px] xl:max-w-full xl:w-full'>
+      <div id='resultsWrapper' className='mb-[72px] max-w-[640px] md:max-w-[1024px] md:mb-[96px] xl:max-w-full xl:w-full xl:px-[140px]'>
         <Results />
       </div>
       <div id='tipsWrapper' className='bg-gradient-opacity mb-[72px] max-w-[640px] md:max-w-[1024px] md:mb-[96px] xl:max-w-full xl:w-full'>
