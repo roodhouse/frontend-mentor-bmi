@@ -144,7 +144,7 @@ function handleClick(e) {
             </div>
 
             <div id="measurementImperialWrapper" className='hidden'>
-            <div id="mearsurementImperialContainer">
+            <div id="mearsurementImperialContainer" className='md:flex md:flex-col'>
               
                 <ImperialHeight register={register} recordFt={recordFt} recordIn={recordIn} />
                 <ImperialWeight register={register} recordLb={recordLb} recordOz={recordOz}/>
