@@ -5,7 +5,6 @@ import Tips from '../src/components/Tips'
 import Limits from '../src/components/Limits'
 
 // need to do logic on load for both
-// add images to full view
 
 function App() {
   return (
