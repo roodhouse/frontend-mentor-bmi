@@ -44,8 +44,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [solution URL](https://github.com/roodhouse/frontend-mentor-bmi)
-- Live Site URL: [Add live site URL here](https://bmi.rugh.us)
+- Solution URL: [solution](https://github.com/roodhouse/frontend-mentor-bmi)
+- Live Site URL: [live site](https://bmi.rugh.us)
 
 ## My process
 
