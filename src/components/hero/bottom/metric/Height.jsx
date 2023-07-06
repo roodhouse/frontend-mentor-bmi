@@ -10,7 +10,7 @@ function Height({register, recordCm}) {
                     </div>
                     <div id="heightMetricInput" className='flex rounded-xl border border-solid border-borders hover:border-blue w-full pr-6 pl-[20px] py-[20px] justify-between cursor-pointer'>
                       <div id="heightInput" className='w-[75%]'>
-                        <input type="number" id='userMetricHeight' name='userMetricHeight' placeholder='0' className='font-["Inter"] text-2xl font-semibold tracking-[-1.2px] text-gunMetal w-full'
+                        <input type="number"  id='userMetricHeight' name='userMetricHeight' placeholder='0' className='font-["Inter"] text-2xl font-semibold tracking-[-1.2px] text-gunMetal w-full'
                           {...register('userMetricHeight',{
                             onChange: (e) => {
                               recordCm(e.target.value)
