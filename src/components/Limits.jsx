@@ -6,7 +6,7 @@ function Limits() {
   return (
     <>
       <div id="limitsContainer" className='md:flex md:flex-wrap'>
-        <div id="limitsCopyWrapper" className='mb-14'>
+        <div id="limitsCopyWrapper" className='mb-14 xl:hidden'>
           <LimitsCopy />
         </div>
         <div id="limitsIconWrapper">
