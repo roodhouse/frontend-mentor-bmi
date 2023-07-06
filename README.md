@@ -1,22 +1,24 @@
-# Frontend Mentor - Body Mass Index Calculator
+# Frontend Mentor - Body Mass Index Calculator solution
 
-![Design preview for the Body Mass Index Calculator coding challenge](./preview.jpg)
+This is my solution to the [Body Mass Index Calculator challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/body-mass-index-calculator-brrBkfSz1T). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
-## Welcome! 👋
+## Table of contents
 
-Thanks for purchasing this premium Frontend Mentor coding challenge.
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects. These premium challenges are perfect portfolio pieces, so please feel free to use what you create in your portfolio to show others.
+## Overview
 
-**To do this challenge, you need a strong understanding of HTML, CSS, and JavaScript.**
+### The challenge
 
-## The challenge
-
-Your challenge is to build out this body mass index calculator page and get it looking as close to the design as possible.
-
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
-
-Your users should be able to:
+Users should be able to:
 
 - Select whether they want to use metric or imperial units
 - Enter their height and weight
@@ -24,81 +26,92 @@ Your users should be able to:
 - View the optimal layout for the interface depending on their device's screen size
 - See hover and focus states for all interactive elements on the page
 
-Want some support on the challenge? [Join our Slack community](https://www.frontendmentor.io/slack) and ask questions in the **#help** channel.
+### Screenshot
 
-### Expected behaviour
+#### Mobile
 
-Below you will find the BMI ranges and their weight classifications. Based on the person's BMI results, add their weight classification onto sentence "Your BMI suggests you’re" within the results component.
+![](/src/assets/images/mb01.png)
 
-- Underweight: BMI less than 18.5
-- Healthy weight: BMI 18.5 to 24.9
-- Overweight: BMI 25 to 29.9
-- Obese: BMI 30 or greater
+![](/src/assets/images/mb02.png)
 
-Add the individual's healthy weight range based on the lower and upper BMI categorisations and the person's height.
+#### Tablet
 
-## Where to find everything
+![](/src/assets/images/tab01.png)
 
-Your task is to build out the project to the design file provided. We provide both Sketch and Figma versions of the design, so you can choose which tool you prefer to use. You can download the design file on the platform. **Please be sure not to share them with anyone else.** The design download comes with a `README.md` file as well to help you get set up.
+#### Desktop
 
-All the required assets for this project are in the `/assets` folder. The images are already exported for the correct screen size and optimized. Some are reusable at multiple screen sizes. So if you don't see an image in a specific folder, it will typically be in another folder for that page.
+![](/src/assets/images/dt01.png)
 
-We also include variable and static font files for the required fonts for this project. You can choose to either link to Google Fonts or use the local font files to host the fonts yourself. Note that we've removed the static font files for the font weights that aren't needed for this project.
+### Links
 
-The design system in the design file will give you more information about the various colors, fonts, and styles used in this project. Our fonts always come from [Google Fonts](https://fonts.google.com/).
+- Solution URL: [solution URL](https://github.com/roodhouse/frontend-mentor-bmi)
+- Live Site URL: [Add live site URL here](https://bmi.rugh.us)
 
-## Building your project
+## My process
 
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
+### Built with
 
-1. Separate the `starter-code` from the rest of this project and rename it to something meaningful for you. Initialize the codebase as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/). **⚠️ IMPORTANT ⚠️: There are already a couple of `.gitignore` files in this project. Please do not remove them or change the content of the files. If you create a brand new project, please use the `.gitignore` files provided in your new codebase. This is to avoid the accidental upload of the design files to GitHub. With these premium challenges, please be sure not to share the design files in your GitHub repo. Thanks!**
-2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
-4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
-5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
+- HTML5, CSS
+- Mobile-first workflow
+- React
+- Tailwind
 
-## Deploying your project
+### What I learned
 
-As mentioned above, there are many ways to host your project for free. Our recommend hosts are:
+Styling the radio buttons was the first challenge in this project. I leaned about the appearance and accent-color properties. Also how to require a change on hover, a different change on checked and another different change on checked&hovered. Here is my rather long tailwindcss for an input in this project:
 
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
+```js
+<input name='selection' type="radio" id='metric' value='metric' className='mr-[18px] w-[31px] h-[31px] appearance-none rounded-[50%] border border-solid border-borders checked:bg-blue checked:border-[8px] checked:border-solid checked:border-[#d8e2e7] hover:border-blue checked:hover:bg-blue checked:hover:border-[#d8e2e7]'/>
+```
+The next challenge that has been difficult is while in tablet view how to keep the image scaled correctly and not sacrifice a piece of the image. I am using object-fit: cover on the image and it scales nicely. However, the rounded edges of the image are not visible. If I allow do not use object-fit: cover then the rounded edges are visible but the image does not scale correctly.
 
-You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://medium.com/frontend-mentor/frontend-mentor-trusted-hosting-providers-bf000dfebe).
+#### Without object fit
+![](/src/assets/images/noObjectFit.png)
 
-## Create a custom `README.md`
+#### With object fit
+![](/src/assets/images/objectFit.png)
 
-We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
+I got a lot of practice with passing props between components with this project. I am still not where I want to be but I am becoming more comfortable with it. Another thing I was able to do was to use a conditional inside of the return of a component. I've done this before but was able to use it this time for a solution to a problem was having. Here is the code:
 
-The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
+```js
+return (
+    <>
+      <div id="bottomResultsContainer" className='p-8 bg-blue rounded-2xl flex flex-col md:rounded-[16px_999px_999px_16px] md:h-[185px] md:flex-wrap md:justify-center'>
+    {isNaN(userBMI) ? (
+      <>
+        <div id="welcomeContainer">
+          <div id="welcomeHeading" className='font-["Inter"] text-white text-2xl tracking-[-1.2px] font-semibold mb-4'>
+            <h1>Welcome!</h1>
+          </div>
+          <div id="welcomeCopy" className='font-["Inter"] text-white text-sm leading-[150%] font-normal'>
+            <p>Enter your height and weight and you’ll see your BMI result here</p>
+          </div>
+        </div>
+      </>
+    ): (
+      <>
+        <div id='resultsHeading' className='font-["Inter"] font-semibold leading-[150%] text-white md:w-[50%] md:pb-2 xl:text-base xl:leading-[150%]'>
+          <p>Your BMI is...</p>
+        </div>
+        <div id='resultsNumber' className='font-["Inter"] mb-6 text-5xl font-semibold leading-[110%] tracking-[-2.4px] text-white md:w-[50%] md:mb-0 md:pb-4 xl:text-[64px] xl:tracking-[-3.2px] xl:pb-0'>
+          <p>{isNumber()}</p>
+        </div>
+        <div id='resultsInfo' className='font-["Inter"] text-sm font-normal leading-[150%] text-white md:w-[50%]'>
+          <p>{bmiOutput()}<span className='font-semibold'>{idealWeight()}</span></p>
+        </div>
+      </>
+    )}
+    </div>
+    </>
+  )
+```
 
-Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
+### Useful resources
 
-## Submitting your solution
+- [radio button styling](https://bryntum.com/blog/3-ways-to-style-radio-buttons-with-modern-css/) - This article helped me with the styling of the radio buttons.
 
-Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://medium.com/frontend-mentor/a-complete-guide-to-submitting-solutions-on-frontend-mentor-ac6384162248) for tips on how to do this.
+## Author
 
-Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
-
-**⚠️ IMPORTANT ⚠️: With these premium challenges, please be sure not to upload the design files to GitHub when you're submitting to the platform and sharing it around. If you've created a brand new project, the easiest way to do that is to copy across the `.gitignore` provided in this starter project.**
-
-## Sharing your solution
-
-There are multiple places you can share your solution:
-
-1. Share your solution page in the **#finished-projects** channel of the [Slack community](https://www.frontendmentor.io/slack). 
-2. Tweet [@frontendmentor](https://twitter.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in the tweet. We'd love to take a look at what you've built and help share it around.
-3. Share your solution on other social channels like LinkedIn.
-4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
-
-We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback. 
-
-The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
-
-## Got feedback for us?
-
-We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi[at]frontendmentor[dot]io.
-
-**Have fun building!** 🚀
+- Website - [my site](https://rugh.us)
+- Frontend Mentor - [@roodhouse](https://www.frontendmentor.io/profile/roodhouse)
+- LinkedIn - [John Rugh](https://www.linkedin.com/in/john-m-rugh/)

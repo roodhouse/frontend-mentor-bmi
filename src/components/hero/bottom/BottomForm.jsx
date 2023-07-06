@@ -137,7 +137,7 @@ function handleClick(e) {
           <div id="measurementWrapper">
 
             <div id="measurementMetricWrapper">
-              <div id="mearsurementMetricContainer" className='flex'>
+              <div id="mearsurementMetricContainer" className='md:flex'>
                 <MetricHeight register={register} recordCm={recordCm} />
                 <MetricWeight register={register} recordKg={recordKg}/>
               </div>

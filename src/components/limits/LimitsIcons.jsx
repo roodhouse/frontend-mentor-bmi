@@ -11,7 +11,7 @@ function LimitsIcons() {
   return (
     <>
         <div id="limitsIconsContanier" className='md:flex md:flex-wrap md:justify-between xl:items-start xl:justify-normal'>
-            <div id="limitsCopyWrapper" className='xl:block xl:mb-0 xl:mr-0 xl:h-[200px]'>
+            <div id="limitsCopyWrapper" className='hidden xl:block xl:mb-0 xl:mr-0 xl:h-[200px]'>
                 <LimitsCopy />
             </div>
             <div id="genderWrapper" className='p-6 rounded-2xl shadow-[16px_32px_56px_0px_rgba(143,174,207,0.25)] bg-white mb-4 md:w-[336px] md:p-8  xl:w-[365px] xl:mr-0 xl:ml-[132px] xl:mb-8'>
