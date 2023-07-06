@@ -9,7 +9,7 @@ function Weight({register, recordLb, recordOz}) {
                       <label htmlFor="userImperialWeight">Weight</label>
                     </div>
                   <div id="weightInputsContainer" className='flex justify-start'>
-                      <div id="weightImperialInputPoundWrapper" className='flex rounded-xl border border-solid border-borders w-[131px] mr-4 pr-6 pl-[20px] py-[20px] justify-between md:w-[299px]'>
+                      <div id="weightImperialInputPoundWrapper" className='flex rounded-xl border border-solid border-borders hover:border-blue cursor-pointer w-[131px] mr-4 pr-6 pl-[20px] py-[20px] justify-between md:w-[299px]'>
                         <div id="weightImperialInputPoundContainer" className='w-[75%]'>
                           <input type="number" id='userImperialWeightPound' name='userImperialWeightPound' placeholder='0' className='font-["Inter"] text-2xl font-semibold tracking-[-1.2px] text-gunMetal w-full'
                             {...register('userImperialWeightPound', {
@@ -24,7 +24,7 @@ function Weight({register, recordLb, recordOz}) {
                         </div>
                       </div>
 
-                      <div id="weightImperialInputOunceWrapper" className='flex rounded-xl border border-solid border-borders w-[131px] pr-6 pl-[20px] py-[20px] justify-between md:w-[299px]'>
+                      <div id="weightImperialInputOunceWrapper" className='flex rounded-xl border border-solid border-borders hover:border-blue cursor-pointer w-[131px] pr-6 pl-[20px] py-[20px] justify-between md:w-[299px]'>
                         <div id="weightImperialInputOunceConatiner" className='w-[75%]'>
                           <input type="number" id='userImperialWeightOunce' name='userImperialWeightOunce' placeholder='0' className='font-["Inter"] text-2xl font-semibold tracking-[-1.2px] text-gunMetal w-full'
                             {...register('userImperialWeightOunce', {
