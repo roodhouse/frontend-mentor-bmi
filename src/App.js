@@ -17,8 +17,10 @@ function App() {
       <div id='resultsWrapper' className='mb-[72px] max-w-[640px] md:max-w-[1024px] md:mb-[96px] xl:max-w-full xl:w-full xl:px-[140px]'>
         <Results />
       </div>
-      <div id='tipsWrapper' className='bg-gradient-opacity mb-[72px] max-w-[640px] md:max-w-[1024px] md:mb-[96px] xl:max-w-full xl:w-full'>
-        <Tips />
+      <div id='tipsWrapper' className='mb-[72px] max-w-[640px] md:max-w-[1024px] md:mb-[96px] xl:max-w-full xl:w-full xl:mb-[120px]'>
+        <div id='tipsPrimary' className='bg-gradient-opacity xl:mx-4'>
+          <Tips />
+        </div>
       </div>
       <div id='limitsWrapper' className='pl-[20px] pr-[29px] pb-[96px] max-w-[640px] md:max-w-[1024px] md:pl-[39px] md:pr-[43px] xl:max-w-full xl:w-full'>
         <Limits />
