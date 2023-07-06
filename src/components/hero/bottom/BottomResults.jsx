@@ -60,6 +60,19 @@ function BottomResults({ userBMI, unit}) {
   return (
     <>
       <div id="bottomResultsContainer" className='p-8 bg-blue rounded-2xl flex flex-col md:rounded-[16px_999px_999px_16px] md:h-[185px] md:flex-wrap md:justify-center'>
+    {isNaN(userBMI) ? (
+      <>
+        <div id="welcomeContainer">
+          <div id="welcomeHeading" className='font-["Inter"] text-white text-2xl tracking-[-1.2px] font-semibold mb-4'>
+            <h1>Welcome!</h1>
+          </div>
+          <div id="welcomeCopy" className='font-["Inter"] text-white text-sm leading-[150%] font-normal'>
+            <p>Enter your height and weight and you’ll see your BMI result here</p>
+          </div>
+        </div>
+      </>
+    ): (
+      <>
         <div id='resultsHeading' className='font-["Inter"] font-semibold leading-[150%] text-white md:w-[50%] md:pb-2 xl:text-base xl:leading-[150%]'>
           <p>Your BMI is...</p>
         </div>
@@ -69,8 +82,9 @@ function BottomResults({ userBMI, unit}) {
         <div id='resultsInfo' className='font-["Inter"] text-sm font-normal leading-[150%] text-white md:w-[50%]'>
           <p>{bmiOutput()}<span className='font-semibold'>{idealWeight()}</span></p>
         </div>
-        
-      </div>
+      </>
+    )}
+    </div>
     </>
   )
 }
