@@ -1,6 +1,7 @@
 import React from 'react';
 import Top from './hero/Top'
 import Bottom from './hero/Bottom'
+import PatternLine from '../assets/images/pattern-curved-line-left.svg'
 
 function Hero() {
   return (
@@ -12,6 +13,9 @@ function Hero() {
         <div id="heroBottomWrapper" className='mt-[-387px] px-6 xl:mt-0 xl:pt-[166px] xl:pl-0 xl:w-[564px] xl:pr-0 xl:ml-[131px]'>
           <Bottom />
         </div>
+      </div>
+      <div id="topImage" className='hidden xl:block xl:relative'>
+        <img src={PatternLine} alt="design line" className='xl:absolute xl:left-[1205px]' />
       </div>
     </>
   )
